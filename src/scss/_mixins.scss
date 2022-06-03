@@ -1,0 +1,23 @@
+@mixin responsive($breakpoint) {
+  @if $breakpoint == phone {
+    //  I USE EM INSTEAL OF REM AS BREAKPOINT BECAUSE EM WORKS BETTER THAN REM ON BREAKPOINST
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 65em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}

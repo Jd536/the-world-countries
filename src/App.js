@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, createContext } from 'react'
+import './App.scss'
+import Layout from './components/layout'
+
+//create a reducer function
+
+export const ThemeContext = createContext()
 
 function App() {
+  //filtered data is the data that's passed to the main container
+
+  const [darkMode, setDarkMode] = useState(false)
+  const handleThemeModeClick = (e) => {
+    e.preventDefault()
+    setDarkMode(!darkMode)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ThemeContext.Provider value={{ darkMode, handleThemeModeClick }}>
+      <div className="App">
+        <Layout />
+      </div>
+    </ThemeContext.Provider>
+  )
 }
 
-export default App;
+export default App

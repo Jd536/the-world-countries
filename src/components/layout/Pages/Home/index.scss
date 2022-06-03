@@ -1,0 +1,29 @@
+@import '../../../../scss/mixins';
+.homepage__search {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  padding: 2.5rem 4rem;
+
+  @include responsive(phone) {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.homepage__country-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 4rem;
+  justify-content: space-between;
+  gap: auto;
+
+  @include responsive(phone) {
+    // flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

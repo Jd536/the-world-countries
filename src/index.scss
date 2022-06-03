@@ -1,0 +1,23 @@
+@import './scss/variables';
+
+*,
+*::after,
+*::before {
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: $color-very-light-gray;
+  max-width: 144rem;
+  margin: 0 auto;
+  min-width: 35rem;
+}

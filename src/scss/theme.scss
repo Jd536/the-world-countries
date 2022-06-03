@@ -1,0 +1,46 @@
+@import '../scss/mixins';
+@import '../scss/variables';
+
+.container-main-dark {
+  background: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+}
+
+.dark-card,
+.header-dark {
+  background-color: hsl(209, 23%, 22%) !important;
+  color: hsl(0, 0%, 100%) !important;
+}
+
+.light-button {
+  color: hsl(0, 0%, 100%) !important;
+}
+
+.btn-back-dark,
+.btn-country-dark {
+  background-color: hsl(209, 23%, 22%) !important;
+  color: hsl(0, 0%, 100%) !important;
+  box-shadow: 0px 0px 5px 10px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 0px 0px 5px 7px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 5px 7px rgba(0, 0, 0, 1);
+}
+
+.search-input-dark,
+.search-dark,
+.dropdown-container-dark,
+.dropdown-button-dark,
+.dropdown__regions-dark {
+  background-color: $color-dark-blue !important;
+  color: $color-white !important;
+}
+
+.dropdown__regions-dark {
+  .dropdown__regions-item {
+    a,
+    &:link,
+    &:visited {
+      color: $color-white !important;
+      // display: none;
+    }
+  }
+}
